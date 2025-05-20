@@ -1,5 +1,7 @@
 User-agent: *
-Disallow: /cdn-cgi/l/email-protection
-Allow: /
+Allow: /capabilities/
+Allow: /certifications/
+Disallow: /cdn-cgi/
+Disallow: /old/
 
 Sitemap: https://steel-fabrication-oman.alwejhagroup.com/sitemap.xml
