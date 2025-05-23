@@ -1,78 +1,519 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <!-- Favicon Added -->
-  <link rel="icon" type="image/x-icon" href="./favicon.ico">
-  <meta name="description" content="Professional steel fabrication services in Oman – industrial structures, custom metalwork, and precision engineering. AL WEJHA GROUP delivers durable solutions." />
-  <meta name="keywords" content="steel fabrication Oman, metal fabrication Oman, industrial structures Oman, steel welding Oman, AL WEJHA GROUP" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="description" content="Oman's Premier Steel Fabrication Experts - AL WEJHA GROUP delivers precision metalwork, industrial structures, and custom fabrication across Muscat, Sohar & all regions. ASME-compliant workshops with CNC technology.">
+  <meta name="keywords" content="steel fabrication Oman, metal fabrication Muscat, industrial welding Sohar, structural steel Salalah, CNC cutting Oman, pipe fabrication Dhofar, steel construction Oman, ASME standards Oman, AL WEJHA GROUP">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://steel-fabrication-oman.alwejhagroup.com/" />
-  <meta name="author" content="AL WEJHA GROUP" />
-  <title>Steel Fabrication Services in Oman | AL WEJHA GROUP</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://steel-fabrication-oman.alwejhagroup.com/">
+  <meta name="author" content="AL WEJHA GROUP">
+  <title>Premium Steel Fabrication Services Oman | AL WEJHA GROUP Industrial Solutions</title>
+  
+  <!-- Preconnect & Preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500&display=swap" as="style">
+  <link rel="preload" href="steel-fabrication-oman.webp" as="image" imagesrcset="steel-fabrication-oman-480.webp 480w, steel-fabrication-oman-800.webp 800w, steel-fabrication-oman.webp 1200w" imagesizes="(max-width: 480px) 100vw, (max-width: 800px) 100vw, 1200px">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+  
+  <!-- Critical CSS -->
   <style>
-    /* Same CSS as benchmark */
-    body { font-family: 'Open Sans', sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; color: #333; line-height: 1.6; }
-    header { background-color: #0b74de; color: #fff; padding: 40px 20px; text-align: center; }
-    header h1 { font-size: 2.2rem; margin: 0; }
-    nav { text-align: center; margin: 20px 0; }
-    nav a { margin: 0 10px; color: #004080; text-decoration: underline; font-weight: 600; }
-    section { max-width: 900px; margin: 0 auto; padding: 20px; background-color: #fff; }
-    h2, h3 { color: #004080; }
-    .cta, .backlink { display: inline-block; background-color: #0b74de; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin: 10px 0; }
-    .cta:hover, .backlink:hover { background-color: #095cb5; }
-    .contact { margin-top: 20px; text-align: center; }
-    .contact a { display: inline-block; margin: 5px 10px; color: #0b74de; text-decoration: none; }
-    img.hero-img { max-width: 100%; height: auto; border-radius: 8px; margin: 20px 0; }
-    footer { background-color: #e0ecf4; text-align: center; padding: 15px; font-size: 0.9rem; }
+    :root {
+      --primary: #003366;
+      --secondary: #00B4D8;
+      --accent: #E63946;
+      --dark: #1D3557;
+      --light: #F1FAEE;
+      --gradient: linear-gradient(135deg, #003366 0%, #006DAA 100%);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.7;
+    }
+    
+    .industrial-header {
+      background: var(--gradient);
+      color: white;
+      padding: 5rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+    }
+    
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .industrial-badge {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      backdrop-filter: blur(5px);
+    }
+    
+    .main-headline {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .sub-headline {
+      font-size: 1.4rem;
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+    
+    .industrial-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .industrial-nav a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .industrial-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--secondary);
+      transition: width 0.3s ease;
+    }
+    
+    .industrial-nav a:hover::after {
+      width: 100%;
+    }
+    
+    .hero-section {
+      max-width: 1400px;
+      margin: 3rem auto;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      position: relative;
+    }
+    
+    .hero-img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    
+    .main-content {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+    
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 350px;
+      gap: 3rem;
+    }
+    
+    .industrial-card {
+      background: white;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    
+    .section-title {
+      color: var(--primary);
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: var(--secondary);
+    }
+    
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .feature-card {
+      padding: 2rem;
+      background: #f8f9fa;
+      border-radius: 12px;
+      border-top: 4px solid var(--secondary);
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .feature-card h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .spec-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .spec-icon {
+      margin-right: 1rem;
+      color: var(--secondary);
+      font-size: 1.5rem;
+    }
+    
+    .region-section {
+      margin: 3rem 0;
+      padding: 2rem;
+      background: var(--gradient);
+      color: white;
+      border-radius: 16px;
+    }
+    
+    .region-list {
+      columns: 2;
+      column-gap: 2rem;
+    }
+    
+    .region-list p {
+      margin-bottom: 0.8rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    .region-list p::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--secondary);
+    }
+    
+    .action-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 1.8rem;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .action-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,51,102,0.3);
+    }
+    
+    .action-btn.whatsapp { background: #25D366; }
+    .action-btn.call { background: var(--dark); }
+    .action-btn.email { background: var(--secondary); }
+    .action-btn.website { background: var(--accent); }
+    
+    .floating-actions {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 1000;
+    }
+    
+    footer {
+      background: var(--primary);
+      color: white;
+      padding: 3rem 2rem;
+      margin-top: 5rem;
+      text-align: center;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--secondary);
+    }
+    
+    @media (max-width: 992px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero-img {
+        height: 450px;
+      }
+      
+      .main-headline {
+        font-size: 2.5rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .industrial-nav {
+        gap: 1rem;
+        padding: 1rem;
+      }
+      
+      .floating-actions {
+        flex-direction: row;
+        bottom: 1rem;
+        right: 1rem;
+      }
+      
+      .action-btn {
+        padding: 0.8rem 1.2rem;
+      }
+      
+      .industrial-card {
+        padding: 2rem;
+      }
+      
+      .region-list {
+        columns: 1;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Steel Fabrication Services in Oman</h1>
-    <p>Precision Metalwork for Industrial & Commercial Projects</p>
+  <header class="industrial-header">
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <div class="industrial-badge">Oman's Steel Fabrication Leader</div>
+      <h1 class="main-headline">Precision Steel Fabrication Services in Oman</h1>
+      <p class="sub-headline">Industrial-Grade Metalwork Solutions for Commercial & Infrastructure Projects</p>
+    </div>
   </header>
 
-  <nav>
+  <nav class="industrial-nav">
     <a href="https://www.alwejhagroup.com/">Home</a>
-    <a href="https://www.alwejhagroup.com/area-of-expertise" target="_blank">Area Of Expertise</a>
-    <a href="https://www.alwejhagroup.com/our-services" target="_blank">Our Services</a>
-    <a href="https://www.alwejhagroup.com/our-clients" target="_blank">Our Clients</a>
+    <a href="https://www.alwejhagroup.com/area-of-expertise" target="_blank">Expertise</a>
+    <a href="https://www.alwejhagroup.com/our-services" target="_blank">Services</a>
+    <a href="https://www.alwejhagroup.com/our-clients" target="_blank">Clients</a>
     <a href="https://www.alwejhagroup.com/contact" target="_blank">Contact</a>
   </nav>
 
-  <section>
-    <img class="hero-img" src="./steel-fabrication-oman.webp" alt="Steel Fabrication Services in Oman - AL WEJHA GROUP">
-    <h2>Custom Metal Fabrication</h2>
-    <p>
-      AL WEJHA GROUP specializes in steel fabrication in Oman, offering CNC cutting, welding, and assembly for industrial structures, pipelines, and architectural metalwork. Our workshops comply with ASME and Oman Civil Defence standards.
-    </p>
-    <h3>Why Choose Us?</h3>
-    <ul>
-      <li>High-grade materials (carbon steel, stainless steel).</li>
-      <li>CNC plasma/oxy-fuel cutting technology.</li>
-      <li>Quality assurance and NDT testing.</li>
-      <li>On-time delivery for large-scale projects.</li>
-    </ul>
-    <h3>Learn More</h3>
-    <p>
-      Explore our capabilities on the main website:
-      <a class="backlink" href="https://www.alwejhagroup.com/" target="_blank">Visit AL WEJHA GROUP</a>
-    </p>
-    <p>Start your steel fabrication project today:</p>
-    <a class="cta" href="https://wa.me/96879271055" target="_blank">Chat on WhatsApp</a>
-    <a class="cta" href="tel:+96879271055">Call Us</a>
-    <a class="cta" href="mailto:business@alwejhagroup.com">Email Us</a>
+  <section class="hero-section">
+    <img class="hero-img" src="steel-fabrication-oman.webp" 
+         alt="Steel Fabrication Workshop in Oman - AL WEJHA GROUP"
+         loading="eager"
+         width="1400"
+         height="600"
+         srcset="steel-fabrication-oman-480.webp 480w,
+                 steel-fabrication-oman-800.webp 800w,
+                 steel-fabrication-oman.webp 1400w"
+         sizes="(max-width: 480px) 480px,
+                (max-width: 800px) 800px,
+                1400px">
   </section>
 
+  <main class="main-content">
+    <div class="content-grid">
+      <section class="industrial-card">
+        <h2 class="section-title">Custom Metal Fabrication Solutions</h2>
+        <p>AL WEJHA GROUP leads Oman's steel fabrication industry with advanced CNC technology and ASME-compliant workshops. We deliver precision metalwork for:</p>
+        
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Industrial Structures</h3>
+            <p>Heavy-duty steel frameworks for factories, warehouses, and processing plants across Oman.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Pipeline Systems</h3>
+            <p>High-pressure pipe fabrication meeting Oman oil & gas industry standards.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Architectural Metalwork</h3>
+            <p>Custom steel designs for commercial buildings and public infrastructure.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Structural Components</h3>
+            <p>Precision-cut beams, columns, and trusses for construction projects.</p>
+          </div>
+        </div>
+
+        <h3 class="section-title">Technical Specifications</h3>
+        <div class="specs-grid">
+          <div class="spec-item">
+            <span class="spec-icon">⚙️</span>
+            <p>CNC Plasma/Oxy-Fuel Cutting</p>
+          </div>
+          <div class="spec-item">
+            <span class="spec-icon">🔧</span>
+            <p>ASME & Oman Civil Defence Certified</p>
+          </div>
+          <div class="spec-item">
+            <span class="spec-icon">📏</span>
+            <p>±0.5mm Fabrication Tolerance</p>
+          </div>
+          <div class="spec-item">
+            <span class="spec-icon">🛡️</span>
+            <p>NDT Testing Available</p>
+          </div>
+        </div>
+
+        <div class="region-section">
+          <h3 style="color:white;">Serving All Oman Regions</h3>
+          <div class="region-list">
+            <p>Muscat Governorate</p>
+            <p>Dhofar (Salalah)</p>
+            <p>Al Batinah (Sohar)</p>
+            <p>Ad Dakhiliyah (Nizwa)</p>
+            <p>Ash Sharqiyah</p>
+            <p>Al Wusta</p>
+            <p>Al Dhahirah</p>
+            <p>Musandam</p>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <a href="https://wa.me/96879271055" class="action-btn whatsapp" target="_blank">💬 WhatsApp</a>
+          <a href="tel:+96879271055" class="action-btn call">📞 Call +968 7927 1055</a>
+          <a href="mailto:business@alwejhagroup.com" class="action-btn email">📧 Email Inquiry</a>
+          <a href="https://www.alwejhagroup.com/" class="action-btn website" target="_blank">🌐 Main Website</a>
+        </div>
+      </section>
+
+      <aside class="industrial-card">
+        <h3 class="section-title">Why Choose AL WEJHA?</h3>
+        <ul style="list-style-type:none;">
+          <li style="margin-bottom:1.5rem; padding-left:1.5rem; position:relative;">
+            <span style="position:absolute; left:0; color:var(--secondary);">✓</span>
+            <strong>Oman-Based Workshops</strong> - Local fabrication with quick turnaround
+          </li>
+          <li style="margin-bottom:1.5rem; padding-left:1.5rem; position:relative;">
+            <span style="position:absolute; left:0; color:var(--secondary);">✓</span>
+            <strong>Quality Materials</strong> - Carbon steel, stainless steel, aluminum
+          </li>
+          <li style="margin-bottom:1.5rem; padding-left:1.5rem; position:relative;">
+            <span style="position:absolute; left:0; color:var(--secondary);">✓</span>
+            <strong>Skilled Workforce</strong> - Certified welders & fabricators
+          </li>
+          <li style="margin-bottom:1.5rem; padding-left:1.5rem; position:relative;">
+            <span style="position:absolute; left:0; color:var(--secondary);">✓</span>
+            <strong>Project Management</strong> - From design to installation
+          </li>
+          <li style="margin-bottom:1.5rem; padding-left:1.5rem; position:relative;">
+            <span style="position:absolute; left:0; color:var(--secondary);">✓</span>
+            <strong>Safety Compliance</strong> - Meets all Omani regulations
+          </li>
+        </ul>
+
+        <div style="margin-top:3rem; padding:1.5rem; background:#f8f9fa; border-radius:12px;">
+          <h4 style="margin-bottom:1rem; color:var(--primary);">Request a Quote</h4>
+          <p style="margin-bottom:1.5rem;">Contact our steel fabrication experts today:</p>
+          <a href="tel:+96879271055" class="action-btn call" style="display:block; text-align:center; margin-bottom:1rem;">📞 Call Now</a>
+          <a href="mailto:business@alwejhagroup.com" class="action-btn email" style="display:block; text-align:center;">📧 Email Plans</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div class="floating-actions">
+    <a href="tel:+96879271055" class="action-btn call">📞 <span>Call</span></a>
+    <a href="https://wa.me/96879271055" class="action-btn whatsapp">💬 <span>WhatsApp</span></a>
+    <a href="mailto:business@alwejhagroup.com" class="action-btn email">📧 <span>Email</span></a>
+    <a href="https://www.alwejhagroup.com/" class="action-btn website" target="_blank">🌐 <span>Website</span></a>
+  </div>
+
   <footer>
-    <p>&copy; 2025 AL WEJHA GROUP | 
-      <a href="https://steel-fabrication-oman.alwejhagroup.com/sitemap.xml">Sitemap</a> | 
-      <a href="https://www.alwejhagroup.com/privacy-policy">Privacy Policy</a> | 
+    <p style="font-size:1.2rem; margin-bottom:1rem;">AL WEJHA GROUP - Precision Steel Fabrication</p>
+    <div class="footer-links">
+      <a href="https://steel-fabrication-oman.alwejhagroup.com/sitemap.xml">Sitemap</a>
+      <a href="https://www.alwejhagroup.com/privacy-policy">Privacy Policy</a>
       <a href="https://www.alwejhagroup.com/terms-of-service">Terms of Service</a>
-    </p>
+    </div>
+    <p style="margin-top:1.5rem; font-size:0.9rem;">© 2025 AL WEJHA GROUP. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
